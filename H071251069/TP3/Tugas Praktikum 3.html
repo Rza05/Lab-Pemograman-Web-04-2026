@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Komunitas F1</title>
+
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ <script>function showmessage(){alert("Hello, ini adalah internal Javascript");}</script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
+
+    <!-- 1. Navbar -->
+    <nav class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo  -->
+            <a href="#" class="text-2xl font-extrabold text-red-600 tracking-wider">F1 NUSANTARA</a>
+            <!-- Menu Navigasi -->
+            <ul class="hidden md:flex space-x-8 font-semibold">
+                <li><a href="#beranda" class="hover:text-red-500 transition duration-300">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-red-500 transition duration-300">Tentang</a></li>
+                <li><a href="#fitur" class="hover:text-red-500 transition duration-300">Kegiatan</a></li>
+                <li><a href="#pendaftaran" class="hover:text-red-500 transition duration-300">Daftar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2 & 3. Header & Hero Section -->
+    <header id="beranda" class="bg-gray-900 text-white py-32 text-center border-b-8 border-red-600">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 uppercase tracking-tight">
+                Rasakan <span class="text-red-600">Adrenalinnya</span>
+            </h1>
+            <p class="text-xl mb-10 text-gray-300">
+                Komunitas penggemar Formula 1 terbesar di Indonesia. Tempat berdiskusi, nonton bareng, dan berbagi antusiasme dunia balap jet darat.
+            </p>
+            <!-- Call to Action (CTA) -->
+            <a href="#pendaftaran" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105">
+                Gabung Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- 4. Tentang  -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900 uppercase">Tentang Komunitas</h2>
+            <div class="w-16 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                F1 Nusantara didirikan untuk menyatukan para "Petrolhead" di seluruh tanah air. Kami tidak memandang tim mana yang Anda dukung, tujuan kami adalah menciptakan wadah yang positif dan seru untuk menikmati olahraga otomotif tertinggi di dunia ini bersama-sama.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. Fitur (menggunakan Grid System) -->
+    <section id="fitur" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 uppercase">Kenapa Harus Bergabung?</h2>
+            
+            <!-- Implementasi Grid System Tailwind -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Kartu 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition duration-300 border-t-4 border-red-600">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Nonton Bareng</h3>
+                    <p class="text-gray-600">Nikmati serunya balapan akhir pekan bersama sesama penggemar di berbagai titik kota kumpul kami.</p>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition duration-300 border-t-4 border-red-600">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Diskusi Teknis</h3>
+                    <p class="text-gray-600">Bahas strategi pit stop, aerodinamika, ban, dan update mesin terbaru setiap pekannya di grup eksklusif.</p>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition duration-300 border-t-4 border-red-600">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Turnamen E-Sports</h3>
+                    <p class="text-gray-600">Ikuti kejuaraan game F1 tahunan internal komunitas kami dan buktikan siapa yang tercepat di lintasan virtual.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Form Pendaftaran -->
+    <section id="pendaftaran" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-lg">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 uppercase">Daftar Anggota</h2>
+            
+            <form class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-bold mb-2" for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-200 transition" placeholder="Masukkan nama Anda">
+                </div>
+                
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-bold mb-2" for="email">Alamat Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-200 transition" placeholder="nama@email.com">
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-gray-700 font-bold mb-2" for="tim">Tim Favorit</label>
+                    <select id="tim" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-200 transition bg-white">
+                        <option>Ferrari</option>
+                        <option>Red Bull Racing</option>
+                        <option>Mercedes</option>
+                        <option>McLaren</option>
+                        <option>Aston Martin</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="w-full bg-gray-900 hover:bg-red-600 text-white font-bold py-4 px-4 rounded-lg transition duration-300">
+                    Kirim Pendaftaran
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <p class="mb-4">Hubungi kami: halo@f1nusantara.com | +62 812 3456 7890</p>
+            
+            <!-- Link Media Sosial -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-red-500 transition">Instagram</a>
+                <a href="#" class="hover:text-red-500 transition">Twitter / X</a>
+                <a href="#" class="hover:text-red-500 transition">Discord</a>
+            </div>
+            
+            <p class="text-sm">&copy; 2026 Komunitas F1 Nusantara. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+<button onclick="showmessage()">Click!</button>
+</body>
+</html>
