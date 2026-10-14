@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pantauan Tugas Tim</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-100 text-slate-800">
+    <main class="max-w-3xl mx-auto p-4 space-y-6">
+      <h1 class="text-2xl font-bold">Pantauan Tugas Tim</h1>
+
+      <!-- Daftar anggota (F1) -->
+      <section class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold mb-2">Anggota Tim</h2>
+        <p id="statusAnggota" class="text-sm text-slate-500 mb-2"></p>
+        <div id="daftarAnggota" class="flex flex-wrap gap-2"></div>
+      </section>
+
+      <!-- Petunjuk sebelum ada anggota yang dipilih -->
+      <p id="petunjuk" class="text-slate-500">
+        Klik nama anggota untuk melihat tugasnya.
+      </p>
+
+      <!-- Bagian tugas (F2 - F5), tersembunyi sampai anggota diklik -->
+      <section id="bagianTugas" class="hidden bg-white rounded-lg shadow p-4 space-y-3">
+        <h2 id="judulTugas" class="text-lg font-semibold">Tugas</h2>
+        <p id="statusTugas" class="text-sm text-slate-500"></p>
+        <p id="ringkasan" class="text-sm font-medium text-blue-700"></p>
+
+        <!-- Pencarian (F3) -->
+        <input
+          id="inputCari"
+          type="text"
+          placeholder="Cari tugas..."
+          class="w-full border rounded px-3 py-2"
+        />
+
+        <!-- Form tambah tugas (F4) -->
+        <form id="formTugas" class="flex gap-2">
+          <input
+            id="inputJudul"
+            type="text"
+            placeholder="Judul tugas baru"
+            class="flex-1 border rounded px-3 py-2"
+          />
+          <button
+            id="tombolSimpan"
+            type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+          >
+            Simpan
+          </button>
+        </form>
+        <p id="errorForm" class="text-sm text-red-600"></p>
+        <p id="notifikasi" class="text-sm text-green-600"></p>
+
+        <!-- Daftar tugas -->
+        <p id="pesanKosong" class="hidden text-slate-500">Tidak ada tugas yang cocok.</p>
+        <ul id="daftarTugas" class="space-y-2"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
